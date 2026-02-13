@@ -1,0 +1,14 @@
+# Android 로컬 설정 예제
+# 실제 로컬.properties 파일은 .gitignore에 의해 무시됩니다.
+
+# SDK 경로
+sdk.dir=/Users/your-username/Library/Android/sdk
+
+# NDK 경로 (필요한 경우)
+ndk.dir=/Users/your-username/Library/Android/ndk/r21e
+
+# 빌드 도구 버전
+java.library.path=/Users/your-username/Library/Android/sdk/build-tools/34.0.0
+
+# 커스텀 설정
+org.gradle.jvmargs=-Xmx4096m

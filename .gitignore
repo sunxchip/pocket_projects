@@ -1,0 +1,170 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# ===== 추가 보안 관련 설정 =====
+
+# 환경 변수 & 민감한 설정
+.env
+.env.*
+!.env.example
+local.properties
+secrets.json
+*.key
+*.pem
+*.p12
+*.pfx
+*.keystore
+
+# API 키 & 토큰
+firebase.json
+google-services.json
+GoogleService-Info.plist
+config/secrets/
+credentials/
+.aws/
+.azure/
+
+# 개발 중 생성되는 테스트 파일
+*.test
+*.tmp
+temp/
+tmp/
+cache/
+
+# 빌드 중 생성되는 파일
+*.apk
+*.aab
+*.ipa
+*.app
+*.dmg
+*.exe
+dist/
+out/
+
+# 데이터베이스 파일 (로컬 테스트)
+*.db
+*.sqlite
+*.sqlite3
+/database/
+/data/
+
+# 로그 파일
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 패키지 매니저 관련
+.packages
+package-lock.json
+yarn.lock
+pubspec.lock  # ⚠️ 선택: 소규모 팀은 공유, 대규모 팀은 무시
+
+# VS Code 확장 & 설정 (선택)
+# .vscode/settings.json
+# .vscode/extensions.json
+
+# 플랫폼 별 생성 파일
+.gradle/
+gradle/
+*.gradle
+gradlew
+gradlew.bat
+
+# iOS/macOS 관련
+Pods/
+Podfile.lock
+.symlinks/
+.derived_data/
+*.pbxuser
+*.xcworkspace/
+xcuserdata/
+*.xcuserdatad/
+**/Flutter/Flutter.framework/
+ios/Flutter/Generated.xcconfig
+ios/Flutter/Flutter.framework/
+ios/Flutter/Flutter.podspec
+
+# Android 관련
+.android/
+local.properties
+android.iml
+*.jks
+*.keystore
+
+# 웹 관련
+web/plugins/
+.dart_tool/web/
+.dart_tool/jscompile/
+
+# 테스트 커버리지
+coverage/
+.coverage
+.nyc_output/
+
+# OS 파일
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/settings.json
+.vscode/launch.json
+.idea/workspace.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/codeStyles/
+*.sublime-project
+*.sublime-workspace
+.netbeans/
+
+# 기타
+*.orig
+*.rej
+merge_file_*
