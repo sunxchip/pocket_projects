@@ -1,0 +1,16 @@
+@import url('https://cdn.jsdelivr.net/gh/webfontworld/gmarketsans/GmarketSans.css');
+@import 'tailwindcss';
+
+* {
+  font-family: 'GmarketSans', 'Gmarket Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #fff9fb;
+}
+
+#root {
+  min-height: 100svh;
+}
