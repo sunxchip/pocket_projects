@@ -1,16 +1,40 @@
-# React + Vite
+# BIT CRUSH
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+비트 연산(AND/OR/XOR/NOT/시프트)으로 떨어지는 숫자 블록을 정확히 0으로 만들어 파괴하는 모바일 우선 React 게임입니다.
 
-Currently, two official plugins are available:
+사이버펑크 톤의 다크 IDE 스타일 UI로 만들었고, 화면의 `?` 버튼을 누르면 게임 안에서도 아래와 같은 사용법 가이드를 볼 수 있습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 게임 방법
 
-## React Compiler
+1. **목표** — 위에서 떨어지는 숫자 블록을 비트 연산으로 정확히 0으로 만들어서 터뜨립니다. 블록이 바닥에 닿기 전에 처치하세요.
+2. **타겟 고르기** — 떨어지는 블록 중 하나를 터치하면 주황색 테두리로 표시되며 타겟이 됩니다.
+3. **연산자 고르기** — 화면 하단 버튼에서 연산자 하나를 고릅니다.
+   - `AND` — 두 수의 같은 자리 비트가 둘 다 1일 때만 1
+   - `OR` — 둘 중 하나라도 1이면 1
+   - `XOR` — 두 비트가 다르면 1, 같으면 0 (같은 수끼리 XOR 하면 항상 0!)
+   - `NOT` — 모든 비트를 뒤집음 (피연산자 입력 불필요)
+   - `<<` — 왼쪽으로 N칸 이동(쉬프트), 빈 자리는 0
+   - `>>` — 오른쪽으로 N칸 이동, 빈 자리는 0
+4. **내 값(My Operand) 입력** — 입력칸에 숫자를 적습니다. 2진수(`1011`), 16진수(`0xB4`), 10진수(`42`) 모두 인식합니다. `NOT`은 입력칸이 비활성화됩니다.
+5. **결과 확인 후 적용** — 가이드 라인에 `Target(타겟값) 연산자 My Operand(내값) = 결과`가 실시간으로 미리 표시됩니다. 결과가 0이 될 것 같으면 APPLY(⚡CRUSH!⚡) 버튼을 누릅니다.
+6. **결과에 따라** — 결과가 0이면 블록 파괴 + 점수 +150, 0이 아니면 블록 값이 결과로 바뀐 채 계속 내려옵니다(다시 도전 가능).
+7. **게임 오버 & 레벨업** — 블록이 바닥의 빨간 라인에 닿으면 HP가 1 깎이고, HP가 0이 되면 게임 오버입니다. 점수가 쌓일수록 레벨이 올라 블록 속도가 빨라지고 더 큰(16비트) 숫자가 등장합니다.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 빠른 공략 팁
 
-## Expanding the Oxlint configuration
+- 가장 쉬운 방법: 타겟과 똑같은 값을 입력하고 `XOR` → 항상 0이 됩니다.
+- `AND`에 `0`을 넣어도 항상 0이 됩니다.
+- 블록 안 작은 보조 숫자는 항상 2진수 표기이니, 헷갈리면 참고하세요.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 실행
+
+```bash
+npm install
+npm run dev
+```
+
+## 빌드
+
+```bash
+npm run build
+```
